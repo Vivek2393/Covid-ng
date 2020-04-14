@@ -1,10 +1,10 @@
-<div>
-    <h1>{{user.name}}</h1>
-    <h3>{{user.title}}</h3>
-    <p>{{user.address}}</p>
-    <div *ngIf="user.phone.length">
+<div class="address-card">
+    <h1 class="name">{{userObj.name}}</h1>
+    <h3 class="designation">{{userObj.designation}}</h3>
+    <p class="address">{{userObj.address}}</p>
+    <div class="phone" *ngIf="userObj.phone.length">
         <p>Phone</p>
-        <p *ngFor= "let phonenum of user.phone">{{phonenum}}</p>
-       
+        <p *ngFor= "let phonenum of userObj.phone">{{phonenum}}</p>
     </div>
 </div>
+<br>
