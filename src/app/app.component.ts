@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from './address-card/user.model';
+import { CallApiService } from './call-api.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +13,11 @@ export class AppComponent {
 
   user1 : User;
   user2 : User;
-  constructor()
+  
+  constructor(private srvc : CallApiService, private http: HttpClient)
   {
+   // let observable = this.http.get('https://api.github.com/users/vivekmishra')
+   // observable.subscribe((resp)=>{console.log(resp)})
     this.user1  = new User();
     this.user1.name = "Vivek";
     this.user1.address = "06, Adarsh Nagar";

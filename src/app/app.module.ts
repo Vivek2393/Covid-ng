@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddressCardComponent } from './address-card/address-card.component';
-
+import { ViewModule } from './view/view.module';
+import { CallApiService } from './call-api.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,11 @@ import { AddressCardComponent } from './address-card/address-card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ViewModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CallApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
