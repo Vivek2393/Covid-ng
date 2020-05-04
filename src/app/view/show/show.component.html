@@ -1,9 +1,12 @@
-<h1>Git  User details</h1>
-Name :<input type="text" [(ngModel)]="username"/><br>
-<button (click)="fetchUser()">Search</button>
-<div *ngIf="response">
-    <p>Login Name : {{response.login}}</p>
-    <p>Num of Repos : {{response.public_repos}}</p>
-    <p>Num of gists : {{response.public_gists}}</p>
-    <p>Followers : {{response.followers}}</p>
+<div class="container">
+    <div class="gitCard"><h1>Git  User details</h1>
+        <b>Name :</b><input type="text" [(ngModel)]="username"/>
+        <button (click)="fetchUser()" class="btn"> Search</button>
+        <div *ngIf="response" >
+            <p><b>Login Name : </b> {{response.login}}</p>
+            <p><b>Num of Repos :</b> {{response.public_repos}}</p>
+            <p><b>Num of gists :</b> {{response.public_gists}}</p>
+            <p><b>Followers :</b> {{response.followers}}</p>
+        </div>
+    </div>
 </div>

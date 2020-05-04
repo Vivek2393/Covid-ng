@@ -6,6 +6,6 @@ import { Injectable } from '@angular/core';
 export class CallApiService {
 
   printToconsole(arg){
-console.log(arg);
+  console.log(arg);
   }
 }
