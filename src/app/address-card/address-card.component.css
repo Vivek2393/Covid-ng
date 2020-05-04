@@ -2,6 +2,7 @@
     padding : 15px;
     width: 30%;
     border: solid 1px gray;
+    border-radius: 3px;
 }
 .designation{
     font-style:italic
